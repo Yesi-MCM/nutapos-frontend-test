@@ -1,0 +1,510 @@
+/* ============================
+   Material Design 3 - Global Styles
+   Nutapos - Manajemen Diskon
+   ============================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* MD3 Color Tokens - Nutapos Green Theme */
+  --md-sys-color-primary: #2E7D32;
+  --md-sys-color-primary-light: #4CAF50;
+  --md-sys-color-primary-lighter: #E8F5E9;
+  --md-sys-color-primary-container: #C8E6C9;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-on-primary-container: #1B5E20;
+  
+  --md-sys-color-secondary: #558B2F;
+  --md-sys-color-secondary-container: #DCEDC8;
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-on-secondary-container: #33691E;
+
+  --md-sys-color-error: #E53935;
+  --md-sys-color-error-light: #FFEBEE;
+  --md-sys-color-on-error: #FFFFFF;
+  --md-sys-color-error-container: #FFCDD2;
+
+  --md-sys-color-background: #F5F5F5;
+  --md-sys-color-surface: #FFFFFF;
+  --md-sys-color-surface-variant: #F3F3F3;
+  --md-sys-color-surface-container: #FAFAFA;
+  --md-sys-color-on-surface: #1C1B1F;
+  --md-sys-color-on-surface-variant: #49454F;
+
+  --md-sys-color-outline: #79747E;
+  --md-sys-color-outline-variant: #E0E0E0;
+  --md-sys-color-scrim: rgba(0, 0, 0, 0.5);
+
+  /* MD3 Typography */
+  --md-sys-typescale-display-font: 'Roboto', sans-serif;
+  --md-sys-typescale-headline-font: 'Roboto', sans-serif;
+  --md-sys-typescale-title-font: 'Roboto', sans-serif;
+  --md-sys-typescale-body-font: 'Roboto', sans-serif;
+  --md-sys-typescale-label-font: 'Roboto', sans-serif;
+
+  /* MD3 Shape */
+  --md-sys-shape-corner-none: 0px;
+  --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 50px;
+
+  /* MD3 Elevation */
+  --md-sys-elevation-1: 0px 1px 2px rgba(0,0,0,0.12), 0px 1px 3px rgba(0,0,0,0.08);
+  --md-sys-elevation-2: 0px 2px 4px rgba(0,0,0,0.12), 0px 1px 8px rgba(0,0,0,0.08);
+  --md-sys-elevation-3: 0px 4px 8px rgba(0,0,0,0.12), 0px 2px 12px rgba(0,0,0,0.08);
+  --md-sys-elevation-4: 0px 8px 16px rgba(0,0,0,0.12), 0px 4px 20px rgba(0,0,0,0.06);
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-surface);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+  background-color: var(--md-sys-color-background);
+}
+
+/* ============================
+   Typography
+   ============================ */
+.text-headline-large {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0;
+}
+.text-headline-medium {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 36px;
+}
+.text-headline-small {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.text-title-large {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.text-title-medium {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+.text-title-small {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+.text-body-large {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+.text-body-medium {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+.text-body-small {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
+.text-label-large {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+.text-label-medium {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+.text-label-small {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+
+/* ============================
+   MD3 Buttons
+   ============================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: var(--md-sys-shape-corner-full);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  line-height: 20px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-filled {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+.btn-filled:hover {
+  background-color: #1B5E20;
+  box-shadow: var(--md-sys-elevation-2);
+}
+.btn-filled:active {
+  background-color: #1B5E20;
+  box-shadow: none;
+}
+
+.btn-filled-wide {
+  width: 100%;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: var(--md-sys-shape-corner-full);
+  font-size: 16px;
+}
+
+.btn-outlined {
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+  border: 1.5px solid var(--md-sys-color-outline-variant);
+}
+.btn-outlined:hover {
+  background-color: var(--md-sys-color-primary-lighter);
+}
+
+.btn-text {
+  background-color: transparent;
+  color: var(--md-sys-color-error);
+  padding: 10px 12px;
+}
+.btn-text:hover {
+  background-color: var(--md-sys-color-error-light);
+}
+
+.btn-tonal {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+.btn-tonal:hover {
+  box-shadow: var(--md-sys-elevation-1);
+}
+
+.btn-error {
+  background-color: var(--md-sys-color-error);
+  color: var(--md-sys-color-on-error);
+  border-radius: var(--md-sys-shape-corner-full);
+}
+.btn-error:hover {
+  background-color: #C62828;
+  box-shadow: var(--md-sys-elevation-2);
+}
+
+/* Icon in button */
+.btn .material-symbols-rounded {
+  font-size: 18px;
+}
+
+/* ============================
+   MD3 Text Fields
+   ============================ */
+.text-field {
+  position: relative;
+  width: 100%;
+}
+
+.text-field label {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--md-sys-color-on-surface-variant);
+  background: var(--md-sys-color-surface);
+  padding: 0 4px;
+  pointer-events: none;
+  transition: all 0.15s ease;
+  z-index: 1;
+}
+
+.text-field input,
+.text-field select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-small);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: var(--md-sys-color-on-surface);
+  background: var(--md-sys-color-surface);
+  outline: none;
+  transition: border-color 0.2s ease;
+  appearance: none;
+}
+
+.text-field input:focus,
+.text-field select:focus {
+  border-color: var(--md-sys-color-primary);
+}
+
+.text-field input:focus + label,
+.text-field label.active {
+  color: var(--md-sys-color-primary);
+}
+
+.text-field.error input,
+.text-field.error select {
+  border-color: var(--md-sys-color-error);
+}
+
+.text-field.error label {
+  color: var(--md-sys-color-error);
+}
+
+.text-field .field-error {
+  font-size: 12px;
+  color: var(--md-sys-color-error);
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.text-field .field-icon-right {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--md-sys-color-error);
+  font-size: 20px;
+}
+
+/* ============================
+   MD3 Cards
+   ============================ */
+.card {
+  background: var(--md-sys-color-surface);
+  border-radius: var(--md-sys-shape-corner-medium);
+  box-shadow: var(--md-sys-elevation-1);
+}
+
+/* ============================
+   MD3 Dialog
+   ============================ */
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--md-sys-color-scrim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.15s ease;
+}
+
+.dialog {
+  background: var(--md-sys-color-surface);
+  border-radius: var(--md-sys-shape-corner-extra-large);
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.2s ease;
+  box-shadow: var(--md-sys-elevation-4);
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dialog-title {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--md-sys-color-on-surface);
+}
+
+.dialog-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--md-sys-color-on-surface-variant);
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.dialog-close:hover {
+  background: var(--md-sys-color-surface-variant);
+}
+
+.dialog-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dialog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.dialog-actions-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+/* ============================
+   MD3 Snackbar
+   ============================ */
+.snackbar {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #313033;
+  color: #FFFFFF;
+  padding: 14px 24px;
+  border-radius: var(--md-sys-shape-corner-small);
+  font-size: 14px;
+  font-weight: 400;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 280px;
+  max-width: 480px;
+  box-shadow: var(--md-sys-elevation-3);
+  animation: snackSlideUp 0.25s ease;
+}
+
+.snackbar.success {
+  background: #1B5E20;
+}
+
+.snackbar.error {
+  background: #B71C1C;
+}
+
+/* ============================
+   Checkbox
+   ============================ */
+.md-checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--md-sys-color-outline);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.md-checkbox:checked {
+  background-color: var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-primary);
+}
+
+.md-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid white;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+/* ============================
+   Animations
+   ============================ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes snackSlideUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(16px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ============================
+   Scrollbar
+   ============================ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--md-sys-color-surface-variant);
+}
+::-webkit-scrollbar-thumb {
+  background: #BDBDBD;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9E9E9E;
+}
+
+/* ============================
+   Chip / Badge
+   ============================ */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: var(--md-sys-shape-corner-full);
+  font-size: 12px;
+  font-weight: 500;
+}
+.chip-new {
+  background: var(--md-sys-color-primary-lighter);
+  color: var(--md-sys-color-primary);
+  border: 1px solid var(--md-sys-color-primary-light);
+}
