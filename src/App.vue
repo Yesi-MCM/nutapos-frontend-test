@@ -65,11 +65,15 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { inject } from '@vercel/analytics'
 import DiskonTable from './components/DiskonTable.vue'
 import DiskonDialog from './components/DiskonDialog.vue'
 import DeleteDialog from './components/DeleteDialog.vue'
 import SnackBar from './components/SnackBar.vue'
 import { useDiskon } from './composables/useDiskon'
+
+// Initialize Vercel Analytics
+inject()
 
 const {
   apiUrl,
